@@ -1,7 +1,7 @@
 ![Repo_Cover](https://github.com/MihailTsybakov/TopologyOptimization/assets/62279777/6bbfbb43-3e34-425f-84ac-4b7f2f0cb92e)
 <hr>
 <b>Topology Optimization</b>
-
+<hr>
 <i>Already done:</i>
 
 > - 2D Topology Optimization: SIMP Algorithm based on FEM with quadrilateral elements
