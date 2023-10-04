@@ -25,3 +25,5 @@
 > - PyVista: 3D Design visualization <i>(https://pyvista.org/)</i>
 >
 > - Blender API: Catmull-Clark smoothing <i>(https://www.blender.org/)</i>
+>
+> - ParaView: Smoothed results rendering <i>(https://www.paraview.org/)</i>
