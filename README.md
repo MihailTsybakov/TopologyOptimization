@@ -16,3 +16,12 @@
 >
 > - Scripts for conversion optimal design to the STL files for 3D-Printing
 
+<i>Used technologies:</i>
+
+> - SciPy: Sparse matricies, numerical methods <i>(https://scipy.org/)</i>
+>
+> - matplotlib: 2D Design visualization <i>(https://matplotlib.org/)</i>
+>
+> - PyVista: 3D Design visualization <i>(https://pyvista.org/)</i>
+>
+> - Blender API: Catmull-Clark smoothing <i>(https://www.blender.org/)</i>
