@@ -87,7 +87,8 @@ class Optimizer_2D:
         return H, sH    
     
     # SIMP Optimization
-    def optimize(self):
+    def optimize(self, multiprocess_pipe = None):
+        # If multiprocess_pipe != None, sends density map to it after each iteration
         self.log_event('Starting optimization', 1)
         iteration = 0
             
@@ -161,6 +162,13 @@ class Optimizer_2D:
             
             dense_c_norm = np.max(np.abs(x_new - x))
             x = x_new
+            
+            
+            # Handling multiprocess case: sending progress
+            if (multiprocess_pipe != None):
+                density_matrix = x.reshape(ex, ey).transpose((1,0))          
+                multiprocess_pipe.send(density_matrix)
+            
             
             if (iteration % 10  == 1):
                 self.log_event(f'Iteration {iteration}, C_norm = {dense_c_norm}', 1)

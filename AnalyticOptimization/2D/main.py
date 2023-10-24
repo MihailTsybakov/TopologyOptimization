@@ -4,7 +4,7 @@ from postprocessor import *
 mesh = QuadMesh(60, 40)
 config = Config()
 
-task = OptimizationTask(mesh, 0.2, 30, config)
+task = OptimizationTask(mesh, volume_frac = 0.2, max_iter = 30, config = config)
 
 task.fix_node(59, 0, True, True)
 task.fix_node(59, 39, True, True)

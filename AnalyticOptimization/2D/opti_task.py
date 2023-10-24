@@ -51,10 +51,5 @@ class OptimizationTask:
     def save_design(self, save_path):
         ey = self.mesh.ey
         ex = self.mesh.ex
-        density_matrix = np.zeros((ey, ex))
-        
-        for col in range(ex):
-            for row in range(ey):
-                density_matrix[row][col] = self.densities[col * ey + row]    
-        
-        np.savetxt(save_path, density_matrix)
+                
+        np.savetxt(save_path, self.densities.reshape(ex, ey).transpose((1,0)))
