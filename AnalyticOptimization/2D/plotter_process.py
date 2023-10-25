@@ -13,16 +13,10 @@ class DataPackage():
         self.ptype = package_type
         self.data = package_data
 
-def visualize(data_pipe, subplots_shape):
-    fig, axes = plt.subplots(1, 4, figsize = (11, 11))
+def visualize(data_pipe, subplots_shape, grid_shape):
+    fig, axes = plt.subplots(grid_shape[0], grid_shape[1], figsize = (11, 11))
     
-    # Prev step densities
-    density_1_old = np.ones(subplots_shape)
-    density_2_old = np.ones(subplots_shape)
-    density_3_old = np.ones(subplots_shape)
-    density_4_old = np.ones(subplots_shape)
-    
-    slice_factors = np.linspace(0, 1, 20).reshape(20, 1, 1)
+    n_proc = grid_shape[0] * grid_shape[1]
     
     try:
         while True:
@@ -35,31 +29,16 @@ def visualize(data_pipe, subplots_shape):
                 plt.close()
                 return
             
-            density_1_new = data_pack.data[0]
-            density_2_new = data_pack.data[1]
-            density_3_new = data_pack.data[2]
-            density_4_new = data_pack.data[3]
+            densities_new = data_pack.data
             
-            slices_1 = density_1_old + (density_1_new - density_1_old) * slice_factors
-            slices_2 = density_2_old + (density_2_new - density_2_old) * slice_factors
-            slices_3 = density_3_old + (density_3_new - density_3_old) * slice_factors
-            slices_4 = density_4_old + (density_4_new - density_4_old) * slice_factors
-            
-            for i in range(20):
-                axes[0].clear()
-                axes[1].clear()
-                axes[2].clear()
-                axes[3].clear()
-                axes[0].imshow(slices_1[i], interpolation = 'gaussian', cmap = 'jet')
-                axes[1].imshow(slices_2[i], interpolation = 'gaussian', cmap = 'jet')
-                axes[2].imshow(slices_3[i], interpolation = 'gaussian', cmap = 'jet')
-                axes[3].imshow(slices_4[i], interpolation = 'gaussian', cmap = 'jet')
-                plt.pause(0.001)
-                
-            density_1_old = density_1_new
-            density_2_old = density_2_new
-            density_3_old = density_3_new
-            density_4_old = density_4_new
+            for irow in range(grid_shape[0]):
+                for icol in range(grid_shape[1]):
+                    axes[irow][icol].clear()
+                    slice_i = irow*grid_shape[1] + icol
+                    if (densities_new[slice_i] == 'finished'):
+                        continue
+                    axes[irow][icol].imshow(densities_new[slice_i], interpolation = 'gaussian', cmap = 'jet')
+            plt.pause(0.01)
                 
     except Exception as e:
         print(f'{e}')
