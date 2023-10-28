@@ -27,3 +27,6 @@
 > - Blender API: Catmull-Clark smoothing <i>(https://www.blender.org/)</i>
 >
 > - ParaView: Smoothed results rendering <i>(https://www.paraview.org/)</i>
+
+Multiprocess results
+![image](https://github.com/MihailTsybakov/TopologyOptimization/assets/62279777/b7c5061d-35da-41bd-8c76-70a9c39d409b)
