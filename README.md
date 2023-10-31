@@ -28,6 +28,6 @@
 >
 > - ParaView: Smoothed results rendering <i>(https://www.paraview.org/)</i>
 
-Multiprocess results
+Multiprocess optimization results example
 ![image](https://github.com/MihailTsybakov/TopologyOptimization/assets/62279777/6d3487c3-984b-48be-b95a-7472dd0daa7d)
 
