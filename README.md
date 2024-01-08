@@ -37,5 +37,9 @@ Multiprocess optimization results example
 3D Filter applying results
 
 ![image](https://github.com/MihailTsybakov/TopologyOptimization/assets/62279777/c2308634-5464-4ceb-9122-edbd533e7f94)
+<hr>
+3D Printed example:
+![Wall_Arm_Vignette](https://github.com/MihailTsybakov/TopologyOptimization/assets/62279777/5ee80d8c-c40d-438d-b1e1-b38e99738ce2)
+
 
 
