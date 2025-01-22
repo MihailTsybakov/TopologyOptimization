@@ -4,7 +4,7 @@
 <hr>
 <i>Already done:</i>
 
-> - 2D Topology Optimization: SIMP Algorithm based on FEM with quadrilateral elements
+> - 2D Topology Optimization: SIMP Algorithm based on FEM with 1st order quad elements
 >   
 > - 2D Topology Optimization: Solution with Convolutional Neural Networks 
 >
@@ -14,27 +14,16 @@
 >
 > - 3D Voxel design smoothing <i>(via 3D Delaunay triangulation & Catmull-Clark smoothing algorithm with Blender API)</i>
 >
-> - Scripts for conversion optimal design to the STL files for 3D-Printing
+> - Scripts to convert generated design to STL files for 3D-Printing
 
-<i>Used technologies:</i>
-
-> - SciPy: Sparse matricies, numerical methods <i>(https://scipy.org/)</i>
->
-> - matplotlib: 2D Design visualization <i>(https://matplotlib.org/)</i>
->
-> - PyVista: 3D Design visualization <i>(https://pyvista.org/)</i>
->
-> - Blender API: Catmull-Clark smoothing <i>(https://www.blender.org/)</i>
->
-> - ParaView: Smoothed results rendering <i>(https://www.paraview.org/)</i>
 
 <hr>
-Multiprocess optimization results example
+Multiprocess learning data sampling
 
 ![image](https://github.com/MihailTsybakov/TopologyOptimization/assets/62279777/6d3487c3-984b-48be-b95a-7472dd0daa7d)
 
 <hr>
-3D Filter applying results
+3D Gaussian Filter 
 
 ![image](https://github.com/MihailTsybakov/TopologyOptimization/assets/62279777/c2308634-5464-4ceb-9122-edbd533e7f94)
 <hr>
